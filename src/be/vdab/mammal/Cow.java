@@ -6,10 +6,6 @@ public class Cow extends Mammals {
 
     private boolean hasHorns;
 
-    public Cow(boolean hasHorns) {
-        this.hasHorns = hasHorns;
-    }
-
     public boolean isHasHorns() {
         return hasHorns;
     }
@@ -17,6 +13,12 @@ public class Cow extends Mammals {
     public void setHasHorns(boolean hasHorns) {
         this.hasHorns = hasHorns;
     }
+
+    public Cow(String name, double weight, String sex, boolean canSwim, int numberOfLegs, boolean hasHorns) {
+        super(name, weight, sex, canSwim, numberOfLegs);
+        this.hasHorns = hasHorns;
+    }
+
 }
 
 

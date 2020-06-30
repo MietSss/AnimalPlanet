@@ -10,4 +10,9 @@ public abstract class Protozoa extends Animals {
     public void setParastic(boolean parastic) {
         isParastic = parastic;
     }
+
+    public Protozoa(String name, double weight, String sex, boolean isParastic) {
+        super(name, weight, sex);
+        this.isParastic = isParastic;
+    }
 }

@@ -5,6 +5,11 @@ public abstract class Mammals extends Animals implements Breathable {
     private boolean canSwim;
     private int numberOfLegs;
 
+    public Mammals(String name, double weight, String sex, boolean canSwim, int numberOfLegs) {
+        super(name, weight, sex);
+        this.canSwim = canSwim;
+        this.numberOfLegs = numberOfLegs;
+    }
 
     @Override
     public void breath() {
@@ -27,4 +32,6 @@ public abstract class Mammals extends Animals implements Breathable {
     public void setNumberOfLegs(int numberOfLegs) {
         this.numberOfLegs = numberOfLegs;
     }
+
+
 }
