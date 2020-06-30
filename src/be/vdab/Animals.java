@@ -64,7 +64,7 @@ public abstract class Animals {
 
     }
 public String toString(){
-return String.format("From the class %s %s is a %s and weighs %.2fkg",this.getClass().getSimpleName(), this.getName(), this.getSex(),this.getWeight());
+return String.format(" %s is a %s %s and weighs %.2fkg",this.getName(),this.getSex().toUpperCase(),this.getClass().getSimpleName().toLowerCase(),this.getWeight());
 }
 
 }
