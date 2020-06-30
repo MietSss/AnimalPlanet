@@ -1,6 +1,6 @@
-package BE.vdab.bird;
+package be.vdab.bird;
 
-import BE.vdab.Birds;
+import be.vdab.Birds;
 
 public class Cockatiel extends Birds {
 

@@ -1,4 +1,4 @@
-package BE.vdab;
+package be.vdab;
 
 public abstract class Mammals extends Animals implements Breathable {
 

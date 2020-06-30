@@ -1,6 +1,6 @@
-package BE.vdab.mammal;
+package be.vdab.mammal;
 
-import BE.vdab.Mammals;
+import be.vdab.Mammals;
 
 public class Cow extends Mammals {
 
