@@ -1,4 +1,4 @@
-package BE.VDAB.protozoa;
+package BE.VDAB;
 
 import BE.VDAB.Animals;
 
