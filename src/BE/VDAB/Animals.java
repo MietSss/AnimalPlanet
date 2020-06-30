@@ -1,4 +1,4 @@
 package BE.VDAB;
 
-public class Animals {
+public abstract class Animals {
 }

@@ -1,4 +1,4 @@
-package BE.VDAB.Bird;
+package BE.VDAB.bird;
 
 import BE.VDAB.Birds;
 

@@ -1,4 +1,4 @@
-package BE.VDAB.Mammal;
+package BE.VDAB.mammal;
 
 import BE.VDAB.Mammals;
 
