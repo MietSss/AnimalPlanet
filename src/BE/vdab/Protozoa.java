@@ -1,6 +1,4 @@
-package BE.VDAB;
-
-import BE.VDAB.Animals;
+package BE.vdab;
 
 public abstract class Protozoa extends Animals {
     private boolean isParastic;

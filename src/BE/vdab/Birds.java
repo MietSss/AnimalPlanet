@@ -1,9 +1,14 @@
-package BE.VDAB;
+package BE.vdab;
 
-public abstract class Birds extends Animals{
+public abstract class Birds extends Animals implements Breathable{
 
     private String featherColour;
     private Boolean canFly;
+
+    @Override
+    public void breath() {
+        System.out.println("birdy breaths");
+    }
 
     public String getFeatherColour() {
         return featherColour;

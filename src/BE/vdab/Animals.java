@@ -1,4 +1,4 @@
-package BE.VDAB;
+package BE.vdab;
 
 public abstract class Animals {
     private String name;

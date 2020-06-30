@@ -1,4 +1,4 @@
-package BE.VDAB.zoo;
+package BE.vdab.zoo;
 
 public class Zoo {
 }

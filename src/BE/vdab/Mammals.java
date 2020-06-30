@@ -1,9 +1,16 @@
-package BE.VDAB;
+package BE.vdab;
 
-public abstract class Mammals {
+public abstract class Mammals extends Animals implements Breathable {
 
-private boolean canSwim;
-private int numberOfLegs;
+    private boolean canSwim;
+    private int numberOfLegs;
+
+
+    @Override
+    public void breath() {
+        System.out.println("mamal breaths");
+
+    }
 
     public boolean isCanSwim() {
         return canSwim;
