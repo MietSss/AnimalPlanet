@@ -2,6 +2,7 @@ package be.vdab;
 
 import be.vdab.bird.Cockatiel;
 import be.vdab.bird.Owl;
+import be.vdab.mammal.Dog;
 import be.vdab.mammal.Monkey;
 import be.vdab.mammal.Tiger;
 import be.vdab.protozoa.Amoebe;
@@ -10,10 +11,13 @@ import be.vdab.zoo.BirdZoo;
 import be.vdab.zoo.MammalZoo;
 import be.vdab.zoo.ProtozoaZoo;
 
+import java.util.Scanner;
+
 public class ZooApp {
 
 
     public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
 
         //6 animals/lifeforms
 
@@ -56,36 +60,13 @@ public class ZooApp {
 
 
         // A dog enters
+        Dog max = new Dog();
+        System.out.println("Give max a command");
+        System.out.println("He knows SPEAK, BEG and LOOK,THE POSTMAN");
+        String command = keyboard.nextLine();
+        max.react(command.toUpperCase());
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       /*BirdZoo paradisio = new BirdZoo();
-        Cockatiel fatou = new Cockatiel();
-       fatou.setName("Fatou");
-        paradisio.addAnimal(fatou);
-        for (Cockatiel element : paradisio.getCockatiels()
-             ) {
-            System.out.println(element.getName());
-
-        */
         }
 
     }
