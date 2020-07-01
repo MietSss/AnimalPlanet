@@ -5,9 +5,6 @@ import be.vdab.Birds;
 import be.vdab.bird.Cockatiel;
 import be.vdab.bird.Eagle;
 import be.vdab.bird.Owl;
-import be.vdab.mammal.Cow;
-import be.vdab.mammal.Monkey;
-import be.vdab.mammal.Tiger;
 
 public class BirdZoo extends Zoo {
     Cockatiel[] cockatiels;
@@ -80,29 +77,42 @@ public class BirdZoo extends Zoo {
         }
 
     }
-    public void showAnimal(){
-            System.out.println("These animals live in Birdiana Zoo");
-                for (Owl owl : owls) {
-                    System.out.printf("%s is a %s %s and weighs %.2fkg", owl.getName(), owl.getSex().toUpperCase(), owl.getClass().getSimpleName().toLowerCase(), owl.getWeight());
-                    if (owls.length == 0) {
-                        System.out.println("There are no owls in the zoo");
-                }
-                for (Cockatiel cockatiel : cockatiels) {
-                    System.out.printf("%s is a %s %s and weighs %.2fkg", cockatiel.getName(), cockatiel.getSex().toUpperCase(), cockatiel.getClass().getSimpleName().toLowerCase(), cockatiel.getWeight());
-                    if (cockatiels.length == 0) {
-                        System.out.println("There are no cockatiels in the zoo");
-                    }
-                }
-                for (Eagle eagle : eagles) {
-                    System.out.printf("%s is a %s %s and weighs %.2fkg", eagle.getName(), eagle.getSex().toUpperCase(), eagle.getClass().getSimpleName().toLowerCase(), eagle.getWeight());
-                    if (eagles.length == 0) {
-                        System.out.println("There are no eagles in the zoo");
-                    }
 
-                }
+    public void showAnimal() {
+        System.out.println("These animals live in Birdiana Zoo :");
+        System.out.println();
+
+        if (owls.length > 0) {
+            for (Owl owl : owls) {
+                System.out.printf("%s is a %s %s and weighs %.2fkg %n%n", owl.getName(), owl.getSex().toUpperCase(), owl.getClass().getSimpleName().toLowerCase(), owl.getWeight());
             }
+        }
+            else {
+                System.out.println("There are no owls in the zoo");
+                System.out.println();
+            }
+        if (cockatiels.length > 0) {
+            for (Cockatiel cockatiel : cockatiels) {
+                System.out.printf("%s is a %s %s and weighs %.2fkg %n%n", cockatiel.getName(), cockatiel.getSex().toUpperCase(), cockatiel.getClass().getSimpleName().toLowerCase(), cockatiel.getWeight());
+            }
+        }
+            else{
+                System.out.println("There are no cockatiels in the zoo");
+                System.out.println();
+            }
+        if (eagles.length > 0) {
+            for (Eagle eagle : eagles) {
+                System.out.printf("%s is a %s %s and weighs %.2fkg %n%n", eagle.getName(), eagle.getSex().toUpperCase(), eagle.getClass().getSimpleName().toLowerCase(), eagle.getWeight());
+            }
+        }
+        else {
+            System.out.println("There are no eagles in the zoo");
+            System.out.println();
+        }
+
+        }
 
 
     }
-}
+
 

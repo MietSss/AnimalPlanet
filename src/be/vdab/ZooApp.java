@@ -61,6 +61,7 @@ public class ZooApp {
 
         // A dog enters
         Dog max = new Dog();
+        System.out.println();
         System.out.println("Give Max a command");
         System.out.println("He knows SPEAK, BEG and LOOK,THE POSTMAN");
         String command = keyboard.nextLine();

@@ -2,6 +2,7 @@ package be.vdab.zoo;
 
 import be.vdab.Animals;
 import be.vdab.Mammals;
+import be.vdab.bird.Owl;
 import be.vdab.mammal.Cow;
 import be.vdab.mammal.Monkey;
 import be.vdab.mammal.Tiger;
@@ -11,6 +12,12 @@ public class MammalZoo extends Zoo {
     Monkey[] monkeys;
     Tiger[] tigers;
 
+
+    public MammalZoo() {
+        cows = new Cow[0];
+        monkeys = new Monkey[0];
+        tigers = new Tiger[0];
+    }
 
     public Cow[] getCows() {
         return cows;
@@ -75,22 +82,24 @@ public class MammalZoo extends Zoo {
 
     @Override
     public void showAnimal() {
-        System.out.println("These animals live in MammaliaZoo");
+        System.out.println("These animals live in MammaliaZoo :");
+        System.out.println();
+
             for (Tiger tiger : tigers) {
-                System.out.printf("%s is a %s %s and weighs %.2fkg", tiger.getName(), tiger.getSex().toUpperCase(), tiger.getClass().getSimpleName().toLowerCase(), tiger.getWeight());
+                System.out.printf("%s is a %s %s and weighs %.2fkg %n%n", tiger.getName(), tiger.getSex().toUpperCase(), tiger.getClass().getSimpleName().toLowerCase(), tiger.getWeight());
                 if (tigers.length == 0) {
-                    System.out.println("There are no tigers in the zoo");
+                    System.out.println("There are no tigers in the zoo %n%n");
             }
             for (Monkey monkey : monkeys) {
-                System.out.printf("%s is a %s %s and weighs %.2fkg", monkey.getName(), monkey.getSex().toUpperCase(), monkey.getClass().getSimpleName().toLowerCase(), monkey.getWeight());
+                System.out.printf("%s is a %s %s and weighs %.2fkg %n%n", monkey.getName(), monkey.getSex().toUpperCase(), monkey.getClass().getSimpleName().toLowerCase(), monkey.getWeight());
                 if (monkeys.length == 0) {
-                    System.out.println("There are no monkeys in the zoo");
+                    System.out.println("There are no monkeys in the zo %n%n");
                 }
             }
             for (Cow cow : cows) {
-                System.out.printf("%s is a %s %s and weighs %.2fkg", cow.getName(), cow.getSex().toUpperCase(), cow.getClass().getSimpleName().toLowerCase(), cow.getWeight());
+                System.out.printf("%s is a %s %s and weighs %.2fkg %n%n", cow.getName(), cow.getSex().toUpperCase(), cow.getClass().getSimpleName().toLowerCase(), cow.getWeight());
                 if (cows.length == 0) {
-                    System.out.println("There are no cows in the zoo");
+                    System.out.println("There are no cows in the zoo  %n%n");
                 }
 
             }
