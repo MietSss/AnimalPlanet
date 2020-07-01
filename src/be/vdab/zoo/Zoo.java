@@ -6,4 +6,5 @@ public abstract class Zoo {
 
     public abstract void addAnimal(Animals animal);
 
+    public abstract void showAnimal();
 }

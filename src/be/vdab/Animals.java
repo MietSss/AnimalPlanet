@@ -6,7 +6,7 @@ public abstract class Animals {
     private String sex;
     private int age;
 
-    private String diet;
+    private Diet diet;
 
 
 
@@ -51,20 +51,14 @@ public abstract class Animals {
         this.age = age;
     }
 
-    public String getDiet() {
+    public Diet getDiet() {
         return diet;
     }
 
-    public void setDiet(String diet) {
+    public void setDiet(Diet diet) {
         this.diet = diet;
     }
 
 
-    public void showAnimals(String name, double weight, String sex){
-
-    }
-public String toString(){
-return String.format(" %s is a %s %s and weighs %.2fkg",this.getName(),this.getSex().toUpperCase(),this.getClass().getSimpleName().toLowerCase(),this.getWeight());
-}
 
 }

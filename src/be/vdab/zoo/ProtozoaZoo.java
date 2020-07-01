@@ -2,9 +2,13 @@ package be.vdab.zoo;
 
 import be.vdab.Animals;
 import be.vdab.Birds;
+import be.vdab.Protozoa;
 import be.vdab.bird.Cockatiel;
 import be.vdab.bird.Eagle;
 import be.vdab.bird.Owl;
+import be.vdab.mammal.Cow;
+import be.vdab.mammal.Monkey;
+import be.vdab.mammal.Tiger;
 import be.vdab.protozoa.Amoebe;
 import be.vdab.protozoa.Malaria;
 
@@ -14,9 +18,9 @@ public class ProtozoaZoo extends Zoo {
 
     @Override
     public void addAnimal(Animals animal) {
-        if (!(animal instanceof Malaria)) {
+
+        if (!(animal instanceof Protozoa)) {
             System.out.println("This is not a protozoa");
-            return;
 
 
         } else if (animal instanceof Malaria) {
@@ -38,6 +42,25 @@ public class ProtozoaZoo extends Zoo {
             amoebes = result;
 
         }
+    }
+
+    @Override
+    public void showAnimal() {
+        System.out.println("These animals live in Protozonia Zoo");
+                for (Amoebe amoebe : amoebes) {
+                System.out.printf("%s is a %s %s and weighs %.2fkg", amoebe.getName(), amoebe.getSex().toUpperCase(), amoebe.getClass().getSimpleName().toLowerCase(), amoebe.getWeight());
+                    if (amoebes.length == 0) {
+                    System.out.println("There are no amoebes in the zoo");
+            }
+            for (Malaria malaria : malarias) {
+                System.out.printf("%s is a %s %s and weighs %.2fkg", malaria.getName(), malaria.getSex().toUpperCase(), malaria.getClass().getSimpleName().toLowerCase(), malaria.getWeight());
+                if (malarias.length == 0) {
+                    System.out.println("There are no monkeys in the zoo");
+                }
+            }
+
+        }
+
     }
 
     public Amoebe[] getAmoebes() {

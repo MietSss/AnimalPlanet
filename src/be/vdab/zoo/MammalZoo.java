@@ -1,19 +1,16 @@
 package be.vdab.zoo;
 
 import be.vdab.Animals;
-import be.vdab.Birds;
 import be.vdab.Mammals;
-import be.vdab.bird.Cockatiel;
-import be.vdab.bird.Eagle;
-import be.vdab.bird.Owl;
 import be.vdab.mammal.Cow;
 import be.vdab.mammal.Monkey;
 import be.vdab.mammal.Tiger;
 
-public class MammalZoo extends Zoo{
+public class MammalZoo extends Zoo {
     Cow[] cows;
     Monkey[] monkeys;
     Tiger[] tigers;
+
 
     public Cow[] getCows() {
         return cows;
@@ -43,7 +40,6 @@ public class MammalZoo extends Zoo{
     public void addAnimal(Animals animal) {
         if (!(animal instanceof Mammals)) {
             System.out.println("This is not a mammal");
-            return;
 
 
         } else if (animal instanceof Cow) {
@@ -67,11 +63,37 @@ public class MammalZoo extends Zoo{
         } else if (animal instanceof Monkey) {
 
             Monkey[] result = new Monkey[monkeys.length + 1];
+
             for (int i = 0; i < monkeys.length; i++) {
                 result[i] = monkeys[i];
             }
             result[result.length - 1] = (Monkey) animal;
             monkeys = result;
+        }
+    }
+
+
+    @Override
+    public void showAnimal() {
+        System.out.println("These animals live in MammaliaZoo");
+            for (Tiger tiger : tigers) {
+                System.out.printf("%s is a %s %s and weighs %.2fkg", tiger.getName(), tiger.getSex().toUpperCase(), tiger.getClass().getSimpleName().toLowerCase(), tiger.getWeight());
+                if (tigers.length == 0) {
+                    System.out.println("There are no tigers in the zoo");
+            }
+            for (Monkey monkey : monkeys) {
+                System.out.printf("%s is a %s %s and weighs %.2fkg", monkey.getName(), monkey.getSex().toUpperCase(), monkey.getClass().getSimpleName().toLowerCase(), monkey.getWeight());
+                if (monkeys.length == 0) {
+                    System.out.println("There are no monkeys in the zoo");
+                }
+            }
+            for (Cow cow : cows) {
+                System.out.printf("%s is a %s %s and weighs %.2fkg", cow.getName(), cow.getSex().toUpperCase(), cow.getClass().getSimpleName().toLowerCase(), cow.getWeight());
+                if (cows.length == 0) {
+                    System.out.println("There are no cows in the zoo");
+                }
+
+            }
         }
 
     }
